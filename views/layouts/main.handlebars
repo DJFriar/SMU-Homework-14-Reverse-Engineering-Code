@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Engineering Code</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <script src="/assets/js/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+  <div class="uk-container-expand">
+    <div uk-grid>
+      <div class="uk-width-1-5@s" id="navbar">
+        {{> navbar }}
+      </div>
+      <div class="uk-width-4-5@s" id="content">
+        {{{ body }}}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
