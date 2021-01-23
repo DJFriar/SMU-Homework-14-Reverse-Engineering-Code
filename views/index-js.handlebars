@@ -45,7 +45,17 @@ module.exports = db;
     <h5>Code Definitions</h5>
     <span class="fab fa-js bigIcon"></span>
     <p>
-      This JavaScript file contains the required data to make sequelize work and is called by the <a href="">index.html</a> page. It contains all the info 
+      This JavaScript file contains the required data to make sequelize work and is called by the <a href="">index.html</a> page.
     </p>
+    <ul>
+      <li>Lines 4-10 setup a number of variables used by Sequelize.</li>
+      <li>Lines 12-16 look to see if the "config.use_env_variable value is set. This will likely be used by something like Heroku/JawsDB to pass the proper DB info back to the app.
+        <ul>
+          <li>If it is set, then Heroku will provide the values for the DB via line 13.</li>
+          <li>If it is not set, then line 15 will pass in the values from our own <a href="/config-json">config.json</a> file.</li>
+        </ul>
+      </li>
+      <li>Lines 18-37 are for <span style="font-style: italic;">fs</span>, which handles some file service items.</li>
+    </ul>
   </div>
 </div>

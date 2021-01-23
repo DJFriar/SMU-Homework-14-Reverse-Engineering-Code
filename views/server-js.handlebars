@@ -38,6 +38,16 @@ db.sequelize.sync().then(function() {
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
     <span class="fab fa-js bigIcon"></span>
-    <p>This page is used to store the database connection parameters used by the sequelize.</p>
+    <p>This page is primary page that powers the app. It is the first page loaded. Let's check it out:</p>
+    <ul>
+      <li>Lines 3 &amp; 4 import the required fiels for express and express-session.</li>
+      <li>Line 6 imports the <a href="/passport-js">passport.js</a> file that powers our user authentication.</li>
+      <li>Line 9 sets the port to whatever the environment has set, and if that isn't available will default to 8080.</li>
+      <li>Line 10 imports the models folder to handle our DB related actions.</li>
+      <li>Lines 13-16 configure Express and tell it to use our public folder.</li>
+      <li>Lines 18-20 configure Express-Sessions to keep track of our user's login status.</li>
+      <li>Lines 23 &amp; 24 tell Express to use our two route files to handle routing.</li>
+      <li>Lines 27-31 connect to our DB and once that is finished will start the app and log to the console the URL and Port being used.</li>
+    </ul>
   </div>
 </div>
