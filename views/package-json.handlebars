@@ -32,7 +32,24 @@
     <h5>Code Definitions</h5>
     <span class="fab fa-npm bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This JSON file tells NPM how to set up the enviornment.
     </p>
+    <ul>
+      <li>Lines 3-5 are just some descriptive data about this app, specifically the name, version, and a description of the app.</li>
+      <li>Line 6 defines the main page that the app needs to function.</li>
+      <li>Lines 7-11 declare what should be done when certain keywords are passed to npm when started from the terminal.
+        <ul>
+          <li>Line 8 will trigger if the user uses <span style="font-style: italic;">npm test</span>. This one will just return text to the console stating that there are no 
+          tests specified and then will terminate the node server.</li>
+          <li>Line 9 will trigger if the user uses <span style="font-style: italic;">npm start</span>. This one start the node server and use server.js to launch it.</li>
+          <li>Line 10 will trigger if the user uses <span style="font-style: italic;">npm watch</span>. This one uses nodemon to monitor the node server. This is most useful 
+          while developing as it will auto reload the node server when changes are detected. (Nodemon was used to assist in creating this site)</li>
+        </ul>
+      </li>
+      <li>Lines 12-14 are more metadata about the app. It sets any keywords that could be used while searching for apps, sets the author and declares the license.</li>
+      <li>Lines 15-23 are arguably the most important part of the package.json file. When the users uses <span style="font-style: italic;">npm install</span> the packages listed 
+      here (and any dependencies they require) will be installed for the user. The numbers are the minimum version of the package that can be installed, and the ^ preceding them 
+      indicate that any version higher than what is stated is ok to use.</li>
+    </ul>
   </div>
 </div>
