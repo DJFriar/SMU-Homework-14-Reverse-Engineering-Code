@@ -18,3 +18,19 @@ h1, h2, h3, h4, h5 {
 .bigIcon {
   font-size: 2.5em;
 }
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: .7em;
+  padding: 12px;
+}
+
+.uk-nav-default {
+  color: #999;
+}
+
+.uk-nav-divider {
+  border-top: 1px solid #999 !important;
+  padding-bottom: 4px;
+}

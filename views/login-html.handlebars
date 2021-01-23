@@ -54,7 +54,32 @@
     <h5>Code Definitions</h5>
     <span class="fab fa-html5 bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This is the HTML page that handles the layout of the members page.
     </p>
+    <ul>
+      <li>Lines 5-11 are the &lt;head&gt; section.
+        <ul>
+          <li>Line 6 sets the page title that appears in the browser to <span style="font-style: italic;">Passport Authentication</span></li>
+          <li>Line 7 sets the character set for the page (UTF-8 in this case)</li>
+          <li>line 8 sets the viewport for the page that is used in responsive layouts and mobile devices.</li>
+          <li>Line 9 imports the Bootstrap framework which this site will use to control layout and styling.</li>
+          <li>Line 10 imports the <a href="/style-css">style.css</a> local to the site for any site specific stylings that might differ from what Bootstrap includes.</li>
+        </ul>
+      </li>
+      <li>Lines 13-44 contain the body of the site, which is where most the content will live.
+        <ul>
+          <li>Lines 13-19 setup the navbar section</li>
+          <li>Lines 20-39 contain a series of nested divs that in Bootstrap will create a container with a single row and column.
+            <ul>
+              <li>Line 23 is a header.</li>
+              <li>Line 24-34 are the form. Within this is the username and password fields and the Submit button.</li>
+              <li>Line 36 is a link to the <a href=/signup-html>signup</a> page.</li>
+            </ul>
+          </li>
+          <li>Line 41 imports the jQuery library.</li>
+          <li>Line 42 imports the <a href="/login-js">login.js</a> file to provide the backend functionality for the form above.</li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
