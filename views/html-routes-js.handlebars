@@ -39,7 +39,28 @@ module.exports = function(app) {
     <h5>Code Definitions</h5>
     <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This file controls the routes for the API related calls that are made. Lets walk through it:
     </p>
+    <ul>
+      <li>Lines 3 imports the path tool which will be used to serve our HTML files.</li>
+      <li>Lines 10-16 are triggered when a get action hits <span style="font-style: italic;">/</span>.
+        <ul>
+          <li>If the user is authenticated, we send them to the members page.</li>
+          <li>If the user is not authenticated, we send them to the signup page.</li>
+        </ul>
+      </li>
+      <li>Lines 18-24 are triggered when a get action hits <span style="font-style: italic;">/login</span>.
+        <ul>
+          <li>If the user already has an account, we send them to the members page.</li>
+          <li>If the user does not have an account, we send them to the signup page.</li>
+        </ul>
+      </li>
+      <li>Lines 28-30 are triggered when a get action hits <span style="font-style: italic;">/members</span>.
+        <ul>
+          <li>If the user has been authenticated we load the members page.</li>
+          <li>If the user has not been authenticated, we send them to the signup page.</li>
+        </ul>      
+      </li>
+    </ul>
   </div>
 </div>

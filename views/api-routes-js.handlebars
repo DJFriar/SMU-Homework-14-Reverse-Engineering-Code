@@ -58,7 +58,26 @@ module.exports = function(app) {
     <h5>Code Definitions</h5>
     <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This file controls the routes for the API related calls that are made. Lets walk through it:
     </p>
+    <ul>
+      <li>Lines 2 &amp; 3 import in our required files. In this case we have the models folder to handle our DB related actions, and the passport.js file to handle user authentication.</li>
+      <li>Lines 10-12 are triggered when a post action hits <span style="font-style: italic;">/api/login</span>. Here we confirm the user is authenticated and if so send them to the 
+      <a href="member-html">member</a> page. If not, they will get an error.</li>
+      <li>Lines 17-28 are triggered when a post action hits <span style="font-style: italic;">/api/signup</span>.
+        <ul>
+          <li>Lines 18-21 creates a new user in the Users table with the email and password provided to us.</li>
+          <li>If no errors are encountered, we use lines 22-24 to then pass these values over to the login api defined above and log the user in.</li>
+          <li>If there is an error, then lines 25-27 handle it by putting the error into JSON format and returning a 401 error to the client.</li>
+        </ul>
+      </li>
+      <li>Lines 31-34 are triggered when a get action hits <span style="font-style: italic;">/logout</span>. Here we log the user out and then redirect them to the signup page.</li>
+      <li>Lines 37-49 are triggered when a get action hits <span style="font-style: italic;">/api/user_data</span>.
+        <ul>
+          <li>Lines 38-41 check if the user is logged in. If not, we send back an empty object.</li>
+          <li>Lines 41-48 will execute if the user is logged in and return a JSON object containg the email and id of the user.</li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
