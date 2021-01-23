@@ -17,8 +17,17 @@ module.exports = function(req, res, next) {
   </div>
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
+    <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This JavaScript page is part of the Node middleware package, Passport. </p>
+      <ul>
+        <li>Lines 5-7 checks to see if the user is logged in. If so, it will return the page they were trying to access.</li>
+        <li>If they are not logged in, then the user is redirected to the home page (line 10).
+          <ul>
+            <li>In the case of this site, / is routed to the signup page for a non-logged in user.</li>
+          </ul>
+        </li>
+      </ul>
     </p>
   </div>
 </div>

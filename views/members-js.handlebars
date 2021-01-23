@@ -14,8 +14,13 @@ $(document).ready(function() {
   </div>
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
+    <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This JavaScript file just does a GET request to figure out which user is logged in and updates the HTML on the page.
     </p>
+    <ul>
+      <li>Line 5 calls the User Data API and passes the resulting data to line 6.</li>
+      <li>Line 6 uses jQuery to replace the text of the member-name class with the email address found in the User Data API response.</li>
+    </ul>
   </div>
 </div>

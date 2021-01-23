@@ -38,8 +38,25 @@ module.exports = function(sequelize, DataTypes) {
   </div>
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
+    <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This JavaScript file contains the user model used by Sequelize to add data to the database.
     </p>
+    <ul>
+      <li>
+        Lines 6-21 contain data related to the DB and related tables. In this case, the table is called "Users" (Sequelize will take the "User" 
+        from line 6 and pluralize it by default. This code doesn't override that behavior).
+      </li>
+      <li>
+        Lines 8-15 define the email column. Here it will have a data type of STRING, must be NOT NULL, with unique values and will validate that the entry is an email address.
+      </li>
+      <li>
+        Lines 17-20 define the password column. Here the datatype will be STRING and it must be NOT NULL.
+      </li>
+      <li>
+        Lines 28-30 are pretty nifty. They take the password provided by the user and hash it before storing it into the database. In this case, if the user entered <span style="font-style: italic;">password</span> for their password, 
+        the value will be stored in the DB as <span style="font-style: italic;">$2a$10$Kz2ZMjuW2aycC35JgodFkO2HKCIGmhFDn9dmfAL8gyTquyiiil2WW</span>.
+      </li>
+    </ul>
   </div>
 </div>

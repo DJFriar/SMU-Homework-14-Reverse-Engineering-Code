@@ -56,8 +56,23 @@ module.exports = passport;
   </div>
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
+    <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This file was pre-generated and is what makes the <a href="http://www.passportjs.org">Passport</a> package work. Passport is authentication middleware for Node.js. Some highlights of this code are:
     </p>
+    <ul>
+      <li>
+        Lines 8-36 instruct Passport to use a local security stratedy (username and password). Passport supports other strategies such as OAuth, Facebook, HTTP Bearer, TOTP, and many others.
+        <ul>
+          <li>Line 11 tells Passport to use an email instead of a username</li>
+          <li>
+            Lines 13-35 are a function that will look in the database for the matching user, and if no such user is found return "Incorrect email" (note this is not a good security practice).
+            If a user is found, it then checks the password and if incorrect returns "Incorrect password". If both are valid, then function returns the user. For best security, both invalid 
+            user and invalid password should return the same error, otherwise hackers will know a valid account from an invalid one.
+          </li>
+        </ul>
+      </li>
+      <li>Lines 41-47 are described by the comments above it, but handle serializing and deserialing the user user. Since it is accross states, I assume this uses some sort of session cookie, but I admit that is just a guess.</li>
+    </ul>
   </div>
 </div>

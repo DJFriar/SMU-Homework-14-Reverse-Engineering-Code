@@ -46,8 +46,31 @@ $(document).ready(function() {
   </div>
   <div class="uk-width-1-2@s">
     <h5>Code Definitions</h5>
+    <span class="fab fa-js bigIcon"></span>
     <p>
-      {{!-- CODE DEFINITION HERE --}}
+      This JavaScript page powers functions on the <a href="/login-html">login.html</a> page.
     </p>
+    <ul>
+      <li>Line 2 ensures that this page waits for all the data to be ready before executing commands.</li>
+      <li>Lines 4-6 use jQuery to reference the forms and button on the page.</li>
+      <li>
+        Lines 9-24 runs when the Submit button is pressed on the login.html page.
+        <ul>
+          <li>Line 10 stops the default page refresh from happening.</li>
+          <li>Lines 11-14 fetch the email and password that were entered by the user and store them as an object called userData.</li>
+          <li>Lines 16-18 ensure that these fields are not blank. If either one is blank then this function is exited.</li>
+          <li>If the function wasn't exited from the above check, then line 21 will execute and runs the function <span style="font-style: italic;">loginUser</span>, defined later on this page.</li>
+          <li>Lines 22 and 23 clear the fields on the html page.</li>
+        </ul>
+      </li>
+      <li>
+        Lines 27-39 contain the function <span style="font-style: italic;">loginUser</span>
+        <ul>
+          <li>Lines 28-31 call the login API and pass in the JSON values of email and password.</li>
+          <li>When the above promise is returned, then lines 32-35 will redirect the user to the <a href="/members-html">members</a> page.</li>
+          <li>If an error is encountered then lines 36-38 will trigger. In this case it will log the error to the console.</li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
